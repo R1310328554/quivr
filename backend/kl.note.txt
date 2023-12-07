@@ -1,0 +1,59 @@
+curl -X 'POST' \
+  'http://localhost:5050/chat/1936351d-45b0-4488-a037-9cbad617e06e/question?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Ik56dFZQV0JDcEdiRmtIZ3MiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAxNDE1MDI3LCJpYXQiOjE3MDE0MTE0MjcsImlzcyI6Imh0dHBzOi8vd2dmZnZrb2Z4YnFnd3ZrZ2dhdW4uc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6Ijg0ODgwNWNhLTE2MzMtNDE3Yi1hNTc1LTBmOGI5NTg0OTg2YiIsImVtYWlsIjoiaG5jemxrQHNpbmEuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoib3RwIiwidGltZXN0YW1wIjoxNzAwNzA0ODg5fV0sInNlc3Npb25faWQiOiIwNzc3ZTYwYi1lZjQ2LTRjZTctYTdkYi0xZjgyN2M5NGI1MDIifQ.k98ReDZHXWCOkTUsbauwRXH6kF3rbbVCKklARrLbraU' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "question": "99999*99999",
+  "model": "gpt-4",
+  "temperature": 0,
+  "max_tokens": 2048,
+  "brain_id": "22eca0ed-f0a9-4c14-9473-815808b207d9" 
+}'
+
+
+curl -X 'POST' \
+  'http://localhost:5050/chat/1936351d-45b0-4488-a037-9cbad617e06e/question2?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Ik56dFZQV0JDcEdiRmtIZ3MiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAxNDE1MDI3LCJpYXQiOjE3MDE0MTE0MjcsImlzcyI6Imh0dHBzOi8vd2dmZnZrb2Z4YnFnd3ZrZ2dhdW4uc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6Ijg0ODgwNWNhLTE2MzMtNDE3Yi1hNTc1LTBmOGI5NTg0OTg2YiIsImVtYWlsIjoiaG5jemxrQHNpbmEuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoib3RwIiwidGltZXN0YW1wIjoxNzAwNzA0ODg5fV0sInNlc3Npb25faWQiOiIwNzc3ZTYwYi1lZjQ2LTRjZTctYTdkYi0xZjgyN2M5NGI1MDIifQ.k98ReDZHXWCOkTUsbauwRXH6kF3rbbVCKklARrLbraU' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "question": "tell me a story about kobe",
+  "model": "gpt-4",
+  "temperature": 0,
+  "max_tokens": 2048, 
+  "brain_id": "22eca0ed-f0a9-4c14-9473-815808b207d9" 
+}'
+
+响应格式 ： 
+{
+  "chat_id": "1936351d-45b0-4488-a037-9cbad617e06e",
+  "message_id": "a1a13d98-a549-473b-89d7-054452623361",
+  "user_message": "123*987",
+  "assistant": "To calculate the product of 123 and 987, you can simply multiply the two numbers together. \n\n123 * 987 = 121,401",
+  "message_time": "2023-12-01T06:21:33.816308",
+  "prompt_title": "awesome prompt111::",
+  "brain_name": "Default brain"
+}
+
+  File "D:\lk\tool\py\Lib\logging\__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+
+    response = await handler(request, exc)
+  File "D:\d\git\gpt\Quivr\backend\packages\utils\handle_request_validation_error.py", line 15, in validation_exception_handler
+    logger.error(request, exc_str)
+Message: <starlette.requests.Request object at 0x0000017F07E16850>
+Arguments: ('1 validation error for Request body value is not a valid dict (type=type_error.dict)',)
+INFO:     127.0.0.1:51438 - "POST /chat/1936351d-45b0-4488-a037-9cbad617e06e/question2?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 422 Unprocessable Entity
+
+
+2048 是由参数 max_tokens 指定的
+litellm.exceptions.ContextWindowExceededError: This model's maximum context length is 4097 tokens. However, you requested 4278 tokens (2230 in the messages, 2048 in the completion). Please reduce the length of the messages or completion.
+
+++++
+429 Too Many Requests 
+{"detail":"You have reached the maximum number of requests for today."}
+

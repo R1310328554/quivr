@@ -99,4 +99,14 @@ if __name__ == "__main__":
     # run main.py to debug backend
     import uvicorn
 
+    for x in  os.environ:
+        print('env is : ',x)
+        
+    # 6549e8f36db40f2252af41956af98ed9
+    print('env OPENAI_PROXY : ', os.environ["OPENAI_PROXY"] )
+    
+    evs =  os.getenv('OPENAI_PROXY')
+    print('OPENAI_PROXY :', evs)
+
     uvicorn.run(app, host="0.0.0.0", port=5050)
+    

@@ -1,0 +1,477 @@
+
+PS D:\d\git\gpt\Quivr\backend> python.exe .\main.py
+INFO:     Started server process [10732]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:5050 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60425 - "OPTIONS /user HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60426 - "OPTIONS /chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60427 - "OPTIONS /onboarding HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60428 - "OPTIONS /brains/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60429 - "OPTIONS /brains/default/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60430 - "OPTIONS /prompts HTTP/1.1" 200 OK
+2023-11-27 20:52:39,522:ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "D:\lk\tool\py\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "D:\lk\tool\py\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+INFO:     127.0.0.1:60430 - "OPTIONS /brains/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60440 - "OPTIONS /brains/default/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60441 - "OPTIONS /prompts HTTP/1.1" 200 OK
+2023-11-27 20:52:42,290:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28brain_id%2C%20name%2C%20status%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60430 - "GET /brains/ HTTP/1.1" 200 OK
+2023-11-27 20:52:43,573:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:52:44,301:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:52:45,073:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 20:52:45,077 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 20:52:45,078 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 20:52:46,384:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:52:47,441:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 20:52:47,443 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:52:47,444 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:52:48,442:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:52:49,534:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_vectors?select=vector_id&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60442 - "GET /user HTTP/1.1" 200 OK
+2023-11-27 20:52:50,529:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60448 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 20:52:51,771:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chats?select=chat_id%2Cuser_id%2Ccreation_time%2Cchat_name&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&order=creation_time "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60443 - "GET /chat HTTP/1.1" 200 OK
+2023-11-27 20:52:52,814:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/onboardings?select=onboarding_a%2Conboarding_b1%2Conboarding_b2%2Conboarding_b3&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&limit=1 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60444 - "GET /onboarding HTTP/1.1" 200 OK
+2023-11-27 20:52:53,855:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 20:52:53,855 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:52:53,855 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:52:54,852:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60447 - "GET /brains/default/ HTTP/1.1" 200 OK
+2023-11-27 20:52:55,521:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60448 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 20:52:56,572:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28brain_id%2C%20name%2C%20status%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60430 - "GET /brains/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60447 - "OPTIONS /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 20:52:57,253:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/onboardings?select=onboarding_a%2Conboarding_b1%2Conboarding_b2%2Conboarding_b3&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&limit=1 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60444 - "GET /onboarding HTTP/1.1" 200 OK
+2023-11-27 20:52:58,256:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 20:52:58,258 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:52:58,259 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:52:59,456:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60443 - "GET /brains/default/ HTTP/1.1" 200 OK
+2023-11-27 20:53:00,560:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:53:01,701:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:53:02,774:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60447 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60684 - "OPTIONS /chat/affcd006-512e-4fa0-8513-1a789eed291a/history HTTP/1.1" 200 OK
+2023-11-27 20:53:17,876:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/onboardings?select=onboarding_a%2Conboarding_b1%2Conboarding_b2%2Conboarding_b3&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&limit=1 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60685 - "GET /onboarding HTTP/1.1" 200 OK
+2023-11-27 20:53:18,533:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:53:19,212:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:53:19,544:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 20:53:19,545 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 20:53:19,546 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 20:53:20,559:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:53:21,214:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 20:53:21,216 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:53:21,216 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:53:22,243:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:53:23,306:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_vectors?select=vector_id&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60684 - "GET /user HTTP/1.1" 200 OK
+2023-11-27 20:53:24,465:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chat_history?select=%2A&chat_id=eq.affcd006-512e-4fa0-8513-1a789eed291a&order=message_time "HTTP/1.1 200 OK"
+2023-11-27 20:53:25,647:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:53:26,726:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/notifications?select=%2A&chat_id=eq.affcd006-512e-4fa0-8513-1a789eed291a&datetime=gt.2023-11-27%2020%3A48%3A25.689147 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60685 - "GET /chat/affcd006-512e-4fa0-8513-1a789eed291a/history HTTP/1.1" 200 OK
+2023-11-27 20:53:27,855:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60691 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 20:53:28,950:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:53:29,986:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:53:31,021:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60688 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 20:53:32,139:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28brain_id%2C%20name%2C%20status%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60689 - "GET /brains/ HTTP/1.1" 200 OK
+2023-11-27 20:53:32,796:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 20:53:32,798 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:53:32,798 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:53:33,498:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60690 - "GET /brains/default/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61087 - "OPTIONS /chat/3bda81a4-b806-4b68-abcf-eb183fa410af/history HTTP/1.1" 200 OK
+2023-11-27 20:54:20,824:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/onboardings?select=onboarding_a%2Conboarding_b1%2Conboarding_b2%2Conboarding_b3&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&limit=1 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:61087 - "GET /onboarding HTTP/1.1" 200 OK
+2023-11-27 20:54:22,293:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chat_history?select=%2A&chat_id=eq.3bda81a4-b806-4b68-abcf-eb183fa410af&order=message_time "HTTP/1.1 200 OK"
+2023-11-27 20:54:23,691:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:54:24,849:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:54:26,050:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:54:26,887:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/notifications?select=%2A&chat_id=eq.3bda81a4-b806-4b68-abcf-eb183fa410af&datetime=gt.2023-11-27%2020%3A49%3A26.150738 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:61093 - "GET /chat/3bda81a4-b806-4b68-abcf-eb183fa410af/history HTTP/1.1" 200 OK
+2023-11-27 20:54:28,401:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:54:29,122:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:54:29,490:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 20:54:29,492 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 20:54:29,492 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 20:54:30,344:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:54:31,464:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 20:54:31,465 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:54:31,465 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:54:32,823:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:54:33,543:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_vectors?select=vector_id&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:61089 - "GET /user HTTP/1.1" 200 OK
+2023-11-27 20:54:34,680:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:54:35,379:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:54:36,090:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:61090 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62088 - "OPTIONS /brains/public HTTP/1.1" 200 OK
+2023-11-27 20:57:17,045:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20description%2C%20last_update%2C%20brain_type&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:62088 - "GET /brains/public HTTP/1.1" 200 OK
+2023-11-27 20:57:18,228:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:62092 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 20:57:19,649:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:57:20,321:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:57:21,041:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 20:57:21,042 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 20:57:21,043 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 20:57:22,312:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 20:57:23,409:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 20:57:23,410 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:57:23,411 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:57:24,655:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 20:57:25,717:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_vectors?select=vector_id&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"        
+INFO:     127.0.0.1:62089 - "GET /user HTTP/1.1" 200 OK
+2023-11-27 20:57:26,775:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28brain_id%2C%20name%2C%20status%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:62090 - "GET /brains/ HTTP/1.1" 200 OK
+2023-11-27 20:57:27,829:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 20:57:27,831 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:57:27,831 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 20:57:28,902:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:62091 - "GET /brains/default/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50619 - "OPTIONS /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50620 - "OPTIONS /prompts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50621 - "OPTIONS /user HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50622 - "OPTIONS /brains/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50619 - "OPTIONS /prompts/a61850df-9606-4627-b8b3-7b5fc3cf272a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50623 - "OPTIONS /brains/default/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50624 - "OPTIONS /prompts HTTP/1.1" 200 OK
+2023-11-27 21:15:28,094:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50624 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 21:15:29,268:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:30,531:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:31,565:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50620 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 21:15:32,271:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50624 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 21:15:32,944:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50633 - "GET /prompts/a61850df-9606-4627-b8b3-7b5fc3cf272a HTTP/1.1" 200 OK
+2023-11-27 21:15:34,269:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 21:15:34,991:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 21:15:35,725:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 21:15:35,726 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 21:15:35,726 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 21:15:36,761:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 21:15:37,805:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 21:15:37,806 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 21:15:37,807 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 21:15:38,812:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:39,825:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_vectors?select=vector_id&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50631 - "GET /user HTTP/1.1" 200 OK
+2023-11-27 21:15:41,816:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28brain_id%2C%20name%2C%20status%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50632 - "GET /brains/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50633 - "OPTIONS /onboarding HTTP/1.1" 200 OK
+2023-11-27 21:15:42,832:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 21:15:42,833 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 21:15:42,834 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 21:15:43,827:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50634 - "GET /brains/default/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50667 - "OPTIONS /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 21:15:45,236:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:46,278:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:47,278:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50666 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 21:15:48,225:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/onboardings?select=onboarding_a%2Conboarding_b1%2Conboarding_b2%2Conboarding_b3&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&limit=1 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50632 - "GET /onboarding HTTP/1.1" 200 OK
+2023-11-27 21:15:49,239:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:50,493:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:51,525:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:51,532 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:50634 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 21:15:52,215:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:53,227:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:54,251:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:15:54,252 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:50634 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 21:20:18,521:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:20:19,543:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:20:20,736:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52191 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 21:20:21,760:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:20:22,791:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:20:23,799:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:20:23,800 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:52192 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59971 - "OPTIONS /user HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59972 - "OPTIONS /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59973 - "OPTIONS /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59974 - "OPTIONS /onboarding HTTP/1.1" 200 OK
+2023-11-27 21:50:29,354:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/api_keys?select=api_key%2Ccreation_time&api_key=eq.eyJhbGciOiJIUzI1NiIsImtpZCI6Ik56dFZQV0JDcEdiRmtIZ3MiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAxMDkxNTYwLCJpYXQiOjE3MDEwODc5NjAsImlzcyI6Imh0dHBzOi8vd2dmZnZrb2Z4YnFnd3ZrZ2dhdW4uc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6Ijg0ODgwNWNhLTE2MzMtNDE3Yi1hNTc1LTBmOGI5NTg0OTg2YiIsImVtYWlsIjoiaG5jemxrQHNpbmEuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoib3RwIiwidGltZXN0YW1wIjoxNzAwNzA0ODg5fV0sInNlc3Npb25faWQiOiIwNzc3ZTYwYi1lZjQ2LTRjZTctYTdkYi0xZjgyN2M5NGI1MDIifQ.cxZDgTRlgGvUOwlJ3fxll9J60pZWSusu9051Q9CMCyk&is_active=eq.True "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59971 - "GET /user HTTP/1.1" 401 Unauthorized
+2023-11-27 21:50:30,695:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/api_keys?select=api_key%2Ccreation_time&api_key=eq.eyJhbGciOiJIUzI1NiIsImtpZCI6Ik56dFZQV0JDcEdiRmtIZ3MiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAxMDkxNTYwLCJpYXQiOjE3MDEwODc5NjAsImlzcyI6Imh0dHBzOi8vd2dmZnZrb2Z4YnFnd3ZrZ2dhdW4uc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6Ijg0ODgwNWNhLTE2MzMtNDE3Yi1hNTc1LTBmOGI5NTg0OTg2YiIsImVtYWlsIjoiaG5jemxrQHNpbmEuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoib3RwIiwidGltZXN0YW1wIjoxNzAwNzA0ODg5fV0sInNlc3Npb25faWQiOiIwNzc3ZTYwYi1lZjQ2LTRjZTctYTdkYi0xZjgyN2M5NGI1MDIifQ.cxZDgTRlgGvUOwlJ3fxll9J60pZWSusu9051Q9CMCyk&is_active=eq.True "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59973 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 401 Unauthorized
+2023-11-27 21:50:31,932:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/api_keys?select=api_key%2Ccreation_time&api_key=eq.eyJhbGciOiJIUzI1NiIsImtpZCI6Ik56dFZQV0JDcEdiRmtIZ3MiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAxMDkxNTYwLCJpYXQiOjE3MDEwODc5NjAsImlzcyI6Imh0dHBzOi8vd2dmZnZrb2Z4YnFnd3ZrZ2dhdW4uc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6Ijg0ODgwNWNhLTE2MzMtNDE3Yi1hNTc1LTBmOGI5NTg0OTg2YiIsImVtYWlsIjoiaG5jemxrQHNpbmEuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoib3RwIiwidGltZXN0YW1wIjoxNzAwNzA0ODg5fV0sInNlc3Npb25faWQiOiIwNzc3ZTYwYi1lZjQ2LTRjZTctYTdkYi0xZjgyN2M5NGI1MDIifQ.cxZDgTRlgGvUOwlJ3fxll9J60pZWSusu9051Q9CMCyk&is_active=eq.True "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59974 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 401 Unauthorized
+2023-11-27 21:50:33,007:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/api_keys?select=api_key%2Ccreation_time&api_key=eq.eyJhbGciOiJIUzI1NiIsImtpZCI6Ik56dFZQV0JDcEdiRmtIZ3MiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzAxMDkxNTYwLCJpYXQiOjE3MDEwODc5NjAsImlzcyI6Imh0dHBzOi8vd2dmZnZrb2Z4YnFnd3ZrZ2dhdW4uc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6Ijg0ODgwNWNhLTE2MzMtNDE3Yi1hNTc1LTBmOGI5NTg0OTg2YiIsImVtYWlsIjoiaG5jemxrQHNpbmEuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoib3RwIiwidGltZXN0YW1wIjoxNzAwNzA0ODg5fV0sInNlc3Npb25faWQiOiIwNzc3ZTYwYi1lZjQ2LTRjZTctYTdkYi0xZjgyN2M5NGI1MDIifQ.cxZDgTRlgGvUOwlJ3fxll9J60pZWSusu9051Q9CMCyk&is_active=eq.True "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59980 - "GET /onboarding HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:59971 - "OPTIONS /brains/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59981 - "OPTIONS /brains/default/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60015 - "OPTIONS /prompts HTTP/1.1" 200 OK
+2023-11-27 21:50:33,986:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59973 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 21:50:35,115:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:36,036:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:37,281:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:37,288 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:59974 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 21:50:38,528:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28brain_id%2C%20name%2C%20status%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59981 - "GET /brains/ HTTP/1.1" 200 OK
+2023-11-27 21:50:39,882:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 21:50:39,882 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 21:50:39,882 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 21:50:41,111:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59980 - "GET /brains/default/ HTTP/1.1" 200 OK
+2023-11-27 21:50:42,438:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:43,557:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:44,313:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:44,313 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:59973 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 21:50:45,397:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:46,608:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:47,970:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59980 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 21:50:48,933:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60092 - "GET /prompts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60093 - "OPTIONS /prompts/a61850df-9606-4627-b8b3-7b5fc3cf272a HTTP/1.1" 200 OK
+2023-11-27 21:50:50,042:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:51,055:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:52,041:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:52,042 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:60096 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 21:50:52,373:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:60093 - "GET /prompts/a61850df-9606-4627-b8b3-7b5fc3cf272a HTTP/1.1" 200 OK
+2023-11-27 21:50:53,137:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:54,151:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:55,221:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 21:50:55,223 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:60092 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64440 - "OPTIONS /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64441 - "OPTIONS /user HTTP/1.1" 200 OK
+2023-11-27 22:06:18,372:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:19,461:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:20,468:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64441 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 22:06:21,722:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:06:22,425:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:06:23,148:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 22:06:23,149 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 22:06:23,150 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 22:06:24,195:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:06:25,264:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 22:06:25,265 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 22:06:25,265 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 22:06:26,470:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:27,539:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_vectors?select=vector_id&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64440 - "GET /user HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64449 - "OPTIONS /brains/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64452 - "OPTIONS /brains/default/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64441 - "OPTIONS /onboarding HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64453 - "OPTIONS /prompts HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64484 - "OPTIONS /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:06:29,237:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:29,916:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:30,974:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64440 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 22:06:32,063:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28brain_id%2C%20name%2C%20status%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64449 - "GET /brains/ HTTP/1.1" 200 OK
+2023-11-27 22:06:33,097:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 22:06:33,106 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 22:06:33,109 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 22:06:34,435:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64441 - "GET /brains/default/ HTTP/1.1" 200 OK
+2023-11-27 22:06:35,450:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64515 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 22:06:36,568:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:37,647:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:38,694:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:38,697 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64514 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:06:39,684:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/onboardings?select=onboarding_a%2Conboarding_b1%2Conboarding_b2%2Conboarding_b3&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&limit=1 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64516 - "GET /onboarding HTTP/1.1" 200 OK
+2023-11-27 22:06:40,752:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:41,706:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:43,364:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:43,368 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64514 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:06:45,553:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:46,398:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:47,400:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64514 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 22:06:48,220:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:48,891:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:49,689:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:49,702 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64516 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:06:53,006:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:53,838:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:54,666:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:54,667 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64516 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64514 - "OPTIONS /chat HTTP/1.1" 200 OK
+2023-11-27 22:06:54,728 [INFO] repository.chat.create_chat: New chat entry in chats table for user 848805ca-1633-417b-a575-0f8b9584986b
+2023-11-27 22:06:55,480:INFO - HTTP Request: POST https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chats "HTTP/1.1 201 Created"
+2023-11-27 22:06:55,492 [INFO] repository.chat.create_chat: Insert response [{'chat_id': 'c7838aaa-eec8-44d8-b158-7c4b23a481ed', 'user_id': '848805ca-1633-417b-a575-0f8b9584986b', 'creation_time': '2023-11-27T14:06:54.581094', 'history': None, 'chat_name': 'New Chat'}]
+INFO:     127.0.0.1:64514 - "POST /chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64514 - "OPTIONS /upload?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9&chat_id=c7838aaa-eec8-44d8-b158-7c4b23a481ed HTTP/1.1" 200 OK
+2023-11-27 22:06:57,384:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:58,165:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:06:58,828:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:06:59,274:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:06:59,697:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 22:06:59,698 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 22:06:59,699 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 22:07:00,469:INFO - HTTP Request: POST https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/notifications "HTTP/1.1 201 Created"
+2023-11-27 22:07:01,424:INFO - HTTP Request: POST https://wgffvkofxbqgwvkggaun.supabase.co/storage/v1/object/quivr/22eca0ed-f0a9-4c14-9473-815808b207d9/032030.xls "HTTP/1.1 200 OK"
+2023-11-27 22:07:02,115 [INFO] routes.upload_routes: File <Response [200 OK]> uploaded successfully
+2023-11-27 22:07:02,742:INFO - HTTP Request: POST https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge "HTTP/1.1 201 Created"
+2023-11-27 22:07:02,743 [INFO] repository.knowledge.add_knowledge: Knowledge 77a432e6-8488-46d6-9899-12fc474c23b6 added successfully
+2023-11-27 22:07:02,744 [INFO] routes.upload_routes: Knowledge id=UUID('77a432e6-8488-46d6-9899-12fc474c23b6') brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9') file_name='032030.xls' url=None extension='.xls' added successfully
+2023-11-27 22:07:12,107:ERROR - Connection to Redis lost: Retry (0/20) now.
+2023-11-27 22:07:16,176:ERROR - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2023-11-27 22:07:21,265:ERROR - Connection to Redis lost: Retry (2/20) in 1.00 second.
+INFO:     127.0.0.1:64514 - "POST /upload?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9&chat_id=c7838aaa-eec8-44d8-b158-7c4b23a481ed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64514 - "OPTIONS /chat/c7838aaa-eec8-44d8-b158-7c4b23a481ed HTTP/1.1" 200 OK
+2023-11-27 22:07:28,091:INFO - HTTP Request: DELETE https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/notifications?chat_id=eq.c7838aaa-eec8-44d8-b158-7c4b23a481ed "HTTP/1.1 200 OK"
+2023-11-27 22:07:28,858:INFO - HTTP Request: DELETE https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chat_history?chat_id=eq.c7838aaa-eec8-44d8-b158-7c4b23a481ed "HTTP/1.1 200 OK"
+2023-11-27 22:07:29,134:INFO - HTTP Request: DELETE https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chats?chat_id=eq.c7838aaa-eec8-44d8-b158-7c4b23a481ed "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64514 - "DELETE /chat/c7838aaa-eec8-44d8-b158-7c4b23a481ed HTTP/1.1" 200 OK
+2023-11-27 22:07:30,753:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:32,601:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:33,411:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:33,413 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls'), Knowledge(id=UUID('77a432e6-8488-46d6-9899-12fc474c23b6'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='032030.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64836 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:07:34,274:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:36,154:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:36,996:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:37,006 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls'), Knowledge(id=UUID('77a432e6-8488-46d6-9899-12fc474c23b6'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='032030.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64836 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:07:42,580:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:43,280:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:43,944:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64908 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 22:07:44,816:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:46,674:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:48,372:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:48,373 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls'), Knowledge(id=UUID('77a432e6-8488-46d6-9899-12fc474c23b6'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='032030.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64909 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:07:51,086:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:51,912:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:53,745:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64909 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 22:07:54,509:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:55,177:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:56,001:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:56,012 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls'), Knowledge(id=UUID('77a432e6-8488-46d6-9899-12fc474c23b6'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='032030.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64911 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64911 - "OPTIONS /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/users HTTP/1.1" 200 OK
+2023-11-27 22:07:58,420:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:07:59,246:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:00,072:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/knowledge?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:00,075 [INFO] routes.knowledge_routes: List of knowledge from knowledge table: [Knowledge(id=UUID('73deb1bb-ca42-4534-ba10-52d59e11c9d0'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='submission.csv', url=None, extension='.csv'), Knowledge(id=UUID('742ddf83-f0ad-4226-a29f-e1b84db7677e'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='067042.xls', url=None, extension='.xls'), Knowledge(id=UUID('77a432e6-8488-46d6-9899-12fc474c23b6'), brain_id=UUID('22eca0ed-f0a9-4c14-9473-815808b207d9'), file_name='032030.xls', url=None, extension='.xls')]
+INFO:     127.0.0.1:64909 - "GET /knowledge?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:08:02,529:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&status=eq.public "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64992 - "GET /prompts HTTP/1.1" 200 OK
+2023-11-27 22:08:03,192:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:03,855:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64995 - "OPTIONS /prompts/a61850df-9606-4627-b8b3-7b5fc3cf272a HTTP/1.1" 200 OK
+2023-11-27 22:08:04,517:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:04,521:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:05,202:INFO - HTTP Request: POST https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/rpc/get_user_email_by_user_id "HTTP/1.1 200 OK"
+2023-11-27 22:08:05,343:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:06,100:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64991 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64911 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/users HTTP/1.1" 200 OK
+2023-11-27 22:08:06,770:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:07,041:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:07,494:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 22:08:07,495 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 22:08:07,495 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 22:08:09,341:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:10,112:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 22:08:10,114 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 22:08:10,114 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 22:08:10,932:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:11,606:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_vectors?select=vector_id&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64993 - "GET /user HTTP/1.1" 200 OK
+2023-11-27 22:08:12,694:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:64992 - "GET /prompts/a61850df-9606-4627-b8b3-7b5fc3cf272a HTTP/1.1" 200 OK
+2023-11-27 22:08:21,070:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chats?select=chat_id%2Cuser_id%2Ccreation_time%2Cchat_name&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&order=creation_time "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:65110 - "GET /chat HTTP/1.1" 200 OK
+2023-11-27 22:08:21,931:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:22,366:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:22,773:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 22:08:22,774 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 22:08:22,774 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 22:08:23,589:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:24,371:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=brain_id&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&default_brain=eq.True "HTTP/1.1 200 OK"
+2023-11-27 22:08:24,372 [INFO] repository.brain.get_default_user_brain: Default brain response: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 22:08:24,373 [INFO] repository.brain.get_default_user_brain: Default brain id: 22eca0ed-f0a9-4c14-9473-815808b207d9
+2023-11-27 22:08:25,208:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:26,002:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_vectors?select=vector_id&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:65109 - "GET /user HTTP/1.1" 200 OK
+2023-11-27 22:08:27,550:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/onboardings?select=onboarding_a%2Conboarding_b1%2Conboarding_b2%2Conboarding_b3&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&limit=1 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:65112 - "GET /onboarding HTTP/1.1" 200 OK
+2023-11-27 22:08:28,867:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:30,697:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:31,376:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:65111 - "GET /brains/22eca0ed-f0a9-4c14-9473-815808b207d9/ HTTP/1.1" 200 OK
+2023-11-27 22:08:39,994 [INFO] repository.chat.create_chat: New chat entry in chats table for user 848805ca-1633-417b-a575-0f8b9584986b
+2023-11-27 22:08:40,665:INFO - HTTP Request: POST https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chats "HTTP/1.1 201 Created"
+2023-11-27 22:08:40,666 [INFO] repository.chat.create_chat: Insert response [{'chat_id': '419e3b3c-1b30-4e5b-b8e2-ac58e17806c2', 'user_id': '848805ca-1633-417b-a575-0f8b9584986b', 'creation_time': '2023-11-27T14:08:39.762102', 'history': None, 'chat_name': 'who is flanklin'}]
+INFO:     127.0.0.1:53490 - "POST /chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53490 - "OPTIONS /chat/419e3b3c-1b30-4e5b-b8e2-ac58e17806c2/question/stream?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:08:41,461:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:42,104:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains_users?select=id%3Abrain_id%2C%20rights%2C%20brains%20%28id%3A%20brain_id%2C%20status%2C%20name%2C%20brain_type%29&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:43,011:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:44,385:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:44,695:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 22:08:44,709 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 22:08:44,710 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 22:08:45,704:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:46,414:INFO - Streaming request for gpt-3.5-turbo
+2023-11-27 22:08:47,071:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_settings?select=%2A&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:47,346:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/users?select=%2A&id=eq.848805ca-1633-417b-a575-0f8b9584986b "HTTP/1.1 200 OK"
+2023-11-27 22:08:47,656:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/customers?select=email&email=eq.hnczlk%40sina.com "HTTP/1.1 405 Method Not Allowed"
+2023-11-27 22:08:47,666 [ERROR] models.databases.supabase.user_usage: Error while checking if user is a premium user
+2023-11-27 22:08:47,667 [ERROR] models.databases.supabase.user_usage: {'code': '25006', 'details': None, 'hint': None, 'message': 'cannot execute INSERT in a read-only transaction'}
+2023-11-27 22:08:48,391:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage?select=daily_requests_count&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&date=eq.20231127 "HTTP/1.1 200 OK"
+2023-11-27 22:08:49,053:INFO - HTTP Request: POST https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/user_daily_usage "HTTP/1.1 201 Created"
+2023-11-27 22:08:49,721:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53490 - "POST /chat/419e3b3c-1b30-4e5b-b8e2-ac58e17806c2/question/stream?brain_id=22eca0ed-f0a9-4c14-9473-815808b207d9 HTTP/1.1" 200 OK
+2023-11-27 22:08:50,549:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chat_history?select=%2A&chat_id=eq.419e3b3c-1b30-4e5b-b8e2-ac58e17806c2&order=message_time "HTTP/1.1 200 OK"
+2023-11-27 22:08:52,338:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:52,979:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+2023-11-27 22:08:53,632:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:53,902:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+2023-11-27 22:08:54,704:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:55,845:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+2023-11-27 22:08:57,150:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:57,428:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+2023-11-27 22:08:58,233:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:59,044:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:08:59,851:INFO - HTTP Request: POST https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chat_history "HTTP/1.1 201 Created"
+2023-11-27 22:09:01,568:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:09:01,996:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+2023-11-27 22:09:02,901:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/brains?select=id%3Abrain_id%2C%20name%2C%20%2A&brain_id=eq.22eca0ed-f0a9-4c14-9473-815808b207d9 "HTTP/1.1 200 OK"
+2023-11-27 22:09:03,175:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/prompts?select=%2A&id=eq.a61850df-9606-4627-b8b3-7b5fc3cf272a "HTTP/1.1 200 OK"
+2023-11-27 22:09:04,081:INFO - HTTP Request: GET https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chats?select=chat_id%2Cuser_id%2Ccreation_time%2Cchat_name&user_id=eq.848805ca-1633-417b-a575-0f8b9584986b&order=creation_time "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:53492 - "GET /chat HTTP/1.1" 200 OK
+2023-11-27 22:09:06,772:INFO - error_code=invalid_api_key error_message='Incorrect API key provided: sk-vhpFa***************************************pH2G. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-11-27 22:09:06,773 [ERROR] llm.qa_base: Caught exception: Incorrect API key provided: sk-vhpFa***************************************pH2G. You can find your API key at https://platform.openai.com/account/api-keys.
+2023-11-27 22:09:06,775 [ERROR] llm.qa_base: Error processing source documents: 'NoneType' object has no attribute 'get'
+2023-11-27 22:09:07,610:INFO - HTTP Request: PATCH https://wgffvkofxbqgwvkggaun.supabase.co/rest/v1/chat_history?message_id=eq.f9e862db-df05-4254-91cf-d18dc73135c9 "HTTP/1.1 200 OK"
+2023-11-27 22:09:07,623 [INFO] repository.chat.update_message_by_id: Message f9e862db-df05-4254-91cf-d18dc73135c9 updated

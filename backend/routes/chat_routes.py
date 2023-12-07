@@ -153,7 +153,7 @@ async def create_question_handler(
         or not chat_question.max_tokens
     ):
         if brain_id:
-            brain = get_brain_by_id(brain_id)
+            brain = get_brain_by_id(brain_id) # 在有对应参数的情况下，完全可以去掉， 多此一举！！
             if brain:
                 fallback_model = brain.model or fallback_model
                 fallback_temperature = brain.temperature or fallback_temperature
@@ -164,8 +164,8 @@ async def create_question_handler(
         chat_question.max_tokens = chat_question.max_tokens or fallback_max_tokens
 
     try:
-        check_user_requests_limit(current_user)
-        is_model_ok = (chat_question).model in user_settings.get("models", ["gpt-3.5-turbo"])  # type: ignore
+        check_user_requests_limit(current_user) # 在没有超过限制的情况下，完全可以去掉， 多此一举！！  每次都查询， 实在受不了，为何不缓存起来？ 
+        is_model_ok = (chat_question).model in user_settings.get("models", ["gpt-3.5-turbo"])  # type: ignore  # 计算两次？ 
         gpt_answer_generator = chat_instance.get_answer_generator(
             chat_id=str(chat_id),
             model=chat_question.model if is_model_ok else "gpt-3.5-turbo",  # type: ignore
@@ -176,13 +176,43 @@ async def create_question_handler(
             prompt_id=chat_question.prompt_id,
             user_id=current_user.id,
         )
-
+  
         chat_answer = gpt_answer_generator.generate_answer(chat_id, chat_question)
 
         return chat_answer
     except HTTPException as e:
         raise e
 
+
+# add new question to chat
+@chat_router.post(
+    "/chat/{chat_id}/question2",
+    tags=["Chat"],
+)
+async def create_question2_handler(
+    request: Request,
+    chat_question: ChatQuestion,
+    chat_id: UUID,
+    brain_id: NullableUUID
+    | UUID
+    | None = Query(..., description="The ID of the brain")
+) -> GetChatHistoryOutput:
+    email = 'hnczlk@sina.com'
+    user_id = UUID('848805ca-1633-417b-a575-0f8b9584986b')
+    current_user: UserIdentity = UserIdentity(email=email, id=user_id)
+    logger.warn('from http qst: ' + chat_question.question)
+    print(1234456)
+    return await create_question_handler(
+        request, chat_question, chat_id, brain_id, current_user
+    )
+    
+demoReq = {
+  "question": "123*987",
+  "model": "gpt-4",
+  "temperature": 0,
+  "max_tokens": 2048,
+  "brain_id": "22eca0ed-f0a9-4c14-9473-815808b207d9" 
+}
 
 # stream new question response from chat
 @chat_router.post(

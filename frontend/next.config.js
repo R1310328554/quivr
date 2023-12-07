@@ -19,6 +19,38 @@ const nextConfig = {
       },
     ];
   },
+  
+  experimental: {
+    serverComponentsExternalPackages: ['axios','mongoose'],
+},
+
+  // webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config) => {
+    config.externals.push({
+       //  'utf-8-validate': 'commonjs utf-8-validate',
+       // 'bufferutil': 'commonjs bufferutil',
+       // 'supports-color': 'commonjs supports-color',
+    })
+
+    return config
+},
+
+  webpack2: (config, { isServer }) => {
+    if (!isServer) {
+      
+      config.module.unknownContextCritical = false
+
+      config.module.rules.push({
+        test: /[\\/]node_modules[\\/].*\.js$/,
+        use: {
+          loader: 'webpack-ignore-dynamic-require',
+        },
+      });
+    }
+
+    return config;
+  },
+
 };
 
 const ContentSecurityPolicy = {
@@ -143,4 +175,6 @@ if (process.env.SENTRY_DSN) {
 } else {
   // SENTRY_DSN does not exist, export nextConfig without Sentry
   module.exports = nextConfig;
+  
+  // "unknownContextCritical": false,
 }
