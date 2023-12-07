@@ -7,6 +7,7 @@
   },
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
+  "python.analysis.extraPaths": ["./backend"],
   "editor.formatOnSave": true,
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
@@ -45,4 +46,5 @@
   "python.linting.pycodestyleCategorySeverity.W": "Error",
   "python.defaultInterpreterPath": "python3",
   "python.linting.flake8CategorySeverity.W": "Error",
+  "json.sortOnSave.enable": true,
 }
