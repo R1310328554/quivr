@@ -1,5 +1,59 @@
 # Changelog
 
+## 0.0.136 (2023-12-13)
+
+## What's Changed
+* feat: Add @tailwindcss/forms plugin and update by @StanGirard in https://github.com/StanGirard/quivr/pull/1869
+* feat: Refactor get_question_context_for_brain endpoint by @StanGirard in https://github.com/StanGirard/quivr/pull/1872
+* feat: Add file URL to DocumentAnswer objects by @StanGirard in https://github.com/StanGirard/quivr/pull/1874
+* Update .gitignore and add .gitmodules by @StanGirard in https://github.com/StanGirard/quivr/pull/1875
+* feat: add new actions modal by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1870
+* feat: add selected brain tag and new discussion button to actions modal by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1873
+* feat: add action modal change brain button by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1876
+
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.135...v0.0.136
+
+## 0.0.135 (2023-12-11)
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.134...v0.0.135
+
+## 0.0.134 (2023-12-11)
+
+## What's Changed
+* feat: add custom rag first abstraction layer by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1858
+* feat(payment): added modal of right size by @StanGirard in https://github.com/StanGirard/quivr/pull/1860
+
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.133...v0.0.134
+
+## 0.0.133 (2023-12-11)
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.132...v0.0.133
+
+## 0.0.132 (2023-12-10)
+
+## What's Changed
+* feat: add generate_answer function to support non streamed response for api brain by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1847
+* fix(ollama): - update supabase-db postgres docker image version by @KonstantinosAng in https://github.com/StanGirard/quivr/pull/1853
+
+## New Contributors
+* @KonstantinosAng made their first contribution in https://github.com/StanGirard/quivr/pull/1853
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.131...v0.0.132
+
+## 0.0.131 (2023-12-06)
+
+## What's Changed
+* feat: update onboarding questions answer by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1834
+* feat: composite brains get by @gozineb in https://github.com/StanGirard/quivr/pull/1837
+* feat: add Agent creation frontend by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1836
+* feat: keep sidebar opened on non mobile devices by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1840
+* feat: add brains list overflow indicator by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1842
+
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.130...v0.0.131
+
 ## 0.0.130 (2023-12-06)
 
 **Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.129...v0.0.130

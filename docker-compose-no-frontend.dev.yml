@@ -1,26 +1,6 @@
 version: "3.8"
 
 services:
-  frontend:
-    pull_policy: never
-    build:
-      context: frontend
-      dockerfile: Dockerfile
-      args:
-        - NEXT_PUBLIC_ENV=local
-        - NEXT_PUBLIC_BACKEND_URL=${NEXT_PUBLIC_BACKEND_URL}
-        - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
-        - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
-        - NEXT_PUBLIC_CMS_URL=${NEXT_PUBLIC_CMS_URL}
-        - NEXT_PUBLIC_FRONTEND_URL=${NEXT_PUBLIC_FRONTEND_URL}
-    container_name: web
-    depends_on:
-      - backend-core
-    restart: always
-    ports:
-      - 3000:3000
-      
-
   backend-core:
     image: backend-base
     pull_policy: never
@@ -28,25 +8,31 @@ services:
       - .env
     build:
       context: backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
+      args:
+        - DEV_MODE=true
     container_name: backend-core
+    volumes:
+      - ./backend/:/code/
     command: 
       - "uvicorn"
       - "main:app"
+      - "--reload"
       - "--host"
       - "0.0.0.0"
       - "--port"
       - "5050"
       - "--workers"
-      - "1"
+      - "2"
     restart: always 
     depends_on:
       db:
           condition: service_healthy
       kong:
-          condition: service_healthy
+          condition: service_healthy          
     ports:
       - 5050:5050
+      - 5678:5678 # debug port
 
   redis:
     image: redis:latest
@@ -54,6 +40,9 @@ services:
     restart: always
     ports:
       - 6379:6379
+    depends_on:
+      db:
+        condition: service_healthy
 
   worker:
     pull_policy: never
@@ -68,6 +57,7 @@ services:
     restart: always
     depends_on:
       - redis
+      - db
 
   beat:
     image: backend-base
@@ -439,7 +429,7 @@ services:
   # Comment out everything below this point if you are using an external Postgres database
   db:
     container_name: supabase-db
-    image: supabase/postgres:15.1.0.136
+    image: supabase/postgres:15.1.0.117
     healthcheck:
       test: pg_isready -U postgres -h localhost
       interval: 5s
@@ -480,7 +470,7 @@ services:
       - ./volumes/db/data:/var/lib/postgresql/data:Z
       # Changes required for Analytics support
       - ./volumes/db/logs.sql:/docker-entrypoint-initdb.d/migrations/99-logs.sql:Z
-      - ./scripts/tables-ollama.sql:/docker-entrypoint-initdb.d/seed.sql
+      - ./scripts/tables.sql:/docker-entrypoint-initdb.d/seed.sql
 
   vector:
     container_name: supabase-vector
