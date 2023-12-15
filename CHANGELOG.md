@@ -1,5 +1,42 @@
 # Changelog
 
+## 0.0.140 (2023-12-14)
+
+## What's Changed
+* feat: Update pytest command in Makefile and add new test by @StanGirard in https://github.com/StanGirard/quivr/pull/1893
+* chore: add IDE extension for i18n handling by @NilsJacobsen in https://github.com/StanGirard/quivr/pull/1896
+* feat: add chat view new design by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1897
+
+## New Contributors
+* @NilsJacobsen made their first contribution in https://github.com/StanGirard/quivr/pull/1896
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.139...v0.0.140
+
+## 0.0.139 (2023-12-14)
+
+## What's Changed
+* feat: allow user to feed brain from Actions bar by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1882
+* feat: add Menu bar by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1885
+* feat: Remove unused method and update file processing by @StanGirard in https://github.com/StanGirard/quivr/pull/1890
+* fix: update chat history fetching logic by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1891
+* feat: add default feed button label by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1892
+
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.138...v0.0.139
+
+## 0.0.138 (2023-12-13)
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.137...v0.0.138
+
+## 0.0.137 (2023-12-13)
+
+## What's Changed
+* feat: add chat history to Actions modal by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1877
+* feat: allow user to control left panel from Chat input by @mamadoudicko in https://github.com/StanGirard/quivr/pull/1880
+
+
+**Full Changelog**: https://github.com/StanGirard/quivr/compare/v0.0.136...v0.0.137
+
 ## 0.0.136 (2023-12-13)
 
 ## What's Changed

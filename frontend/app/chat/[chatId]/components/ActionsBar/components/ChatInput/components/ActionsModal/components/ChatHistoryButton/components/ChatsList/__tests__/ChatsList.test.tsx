@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { act, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import {
@@ -12,6 +12,7 @@ import {
   ChatProviderMock,
 } from "@/lib/context/ChatProvider/mocks/ChatProviderMock";
 import { KnowledgeToFeedProvider } from "@/lib/context/KnowledgeToFeedProvider";
+import { SideBarProvider } from "@/lib/context/SidebarProvider/sidebar-provider";
 import { SupabaseContextMock } from "@/lib/context/SupabaseProvider/mocks/SupabaseProviderMock";
 
 vi.mock("@/lib/context/SupabaseProvider/supabase-provider", () => ({
@@ -20,7 +21,6 @@ vi.mock("@/lib/context/SupabaseProvider/supabase-provider", () => ({
 
 import { ChatsList } from "../index";
 
-const getChatsMock = vi.fn(() => []);
 const queryClient = new QueryClient();
 
 vi.mock("next/navigation", async () => {
@@ -91,7 +91,9 @@ describe("ChatsList", () => {
         <KnowledgeToFeedProvider>
           <ChatProviderMock>
             <BrainProviderMock>
-              <ChatsList />
+              <SideBarProvider>
+                <ChatsList />
+              </SideBarProvider>
             </BrainProviderMock>
           </ChatProviderMock>
         </KnowledgeToFeedProvider>
@@ -99,9 +101,6 @@ describe("ChatsList", () => {
     );
     const chatsList = getByTestId("chats-list");
     expect(chatsList).toBeDefined();
-
-    const newChatButton = getByTestId("new-chat-button");
-    expect(newChatButton).toBeDefined();
   });
 
   it("renders the chats list with correct number of items", () => {
@@ -110,7 +109,9 @@ describe("ChatsList", () => {
         <KnowledgeToFeedProvider>
           <ChatProviderMock>
             <BrainProviderMock>
-              <ChatsList />
+              <SideBarProvider>
+                <ChatsList />
+              </SideBarProvider>
             </BrainProviderMock>
           </ChatProviderMock>
         </KnowledgeToFeedProvider>
@@ -118,29 +119,5 @@ describe("ChatsList", () => {
     );
     const chatItems = screen.getAllByTestId("chats-list-item");
     expect(chatItems).toHaveLength(2);
-  });
-
-  it("should call getChats when the component mounts", async () => {
-    vi.mock("@/lib/api/chat/useChatApi", () => ({
-      useChatApi: () => ({
-        getChats: () => getChatsMock(),
-      }),
-    }));
-
-    await act(() =>
-      render(
-        <QueryClientProvider client={queryClient}>
-          <KnowledgeToFeedProvider>
-            <ChatProviderMock>
-              <BrainProviderMock>
-                <ChatsList />
-              </BrainProviderMock>
-            </ChatProviderMock>
-          </KnowledgeToFeedProvider>
-        </QueryClientProvider>
-      )
-    );
-
-    expect(getChatsMock).toHaveBeenCalledTimes(1);
   });
 });
