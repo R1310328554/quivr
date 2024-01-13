@@ -31,6 +31,7 @@ QUIVR_DEFAULT_PROMPT = "Your name is Quivr. You're a helpful assistant.  If you 
 brain_service = BrainService()
 chat_service = ChatService()
 
+import os
 
 class QuivrRAG(BaseModel, RAGInterface):
     """
@@ -124,6 +125,53 @@ class QuivrRAG(BaseModel, RAGInterface):
         if self.brain_settings.ollama_api_base_url and model.startswith("ollama"):
             api_base = self.brain_settings.ollama_api_base_url
 
+        use_azure_chatgpt =  os.getenv('use_azure_chatgpt')
+        
+        print('ragggggggggggggggraggggggggggggggg _create_llm_create_llm use_azure_chatgpt', use_azure_chatgpt)
+        
+        OPEN_AI_PROXY =  os.getenv('OPEN_AI_PROXY')
+        azure_deployment_id =  os.getenv('azure_deployment_id')
+        azure_api_version =  os.getenv('azure_api_version')
+        OPENAI_API_BASE  =  os.getenv('open_ai_api_base')
+        # azure_api_version =  os.getenv('azure_api_version')
+        azure_api_key =  os.getenv('azure_api_key')
+        
+        if OPEN_AI_PROXY:
+            api_base = OPEN_AI_PROXY
+        
+        print('raggg api_base', api_base)
+        
+        if use_azure_chatgpt:
+            api_base = OPENAI_API_BASE
+            model_kwargs = {}
+            # model_kwargs["azure_deployment_id"] = azure_deployment_id
+            model_kwargs["deployment_id"] = azure_deployment_id
+            # model_kwargs["azure_api_version"] = azure_api_version
+            model_kwargs["api_version"] = azure_api_version
+            
+            print('model_kwargs : ', model_kwargs)
+            print('raggggggggggggggg : ', azure_deployment_id, model)
+            
+            # model = AzureChatOpenAI(
+            #     deployment_name=azure_deployment_id,
+            # )
+            callbacks = None
+            return  ChatLiteLLM(
+                model=azure_deployment_id,
+                model_name=azure_deployment_id,
+                streaming=streaming,
+                verbose=True,
+                callbacks=callbacks,
+                max_tokens=self.max_tokens,
+                api_base=api_base,
+                # api_version=azure_api_version,
+                azure_api_key=azure_api_key,
+                custom_llm_provider='azure',
+                # openai_api_key=azure_api_key,
+                
+                model_kwargs=model_kwargs,
+            )
+            
         return ChatLiteLLM(
             temperature=temperature,
             max_tokens=self.max_tokens,

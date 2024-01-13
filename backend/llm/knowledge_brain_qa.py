@@ -98,9 +98,13 @@ class KnowledgeBrainQA(BaseModel, QAInterface):
     def generate_answer(
         self, chat_id: UUID, question: ChatQuestion
     ) -> GetChatHistoryOutput:
-        transformed_history = format_chat_history(
-            chat_service.get_chat_history(self.chat_id)
-        )
+        # transformed_history = format_chat_history(
+        #     chat_service.get_chat_history(self.chat_id)
+        # )
+        
+        transformed_history = []
+        
+        print('transformed_history generate_answer generate_answergenerate_answer : ', transformed_history)
 
         # The Chain that combines the question and answer
         qa = ConversationalRetrievalChain(
@@ -162,9 +166,11 @@ class KnowledgeBrainQA(BaseModel, QAInterface):
     async def generate_stream(
         self, chat_id: UUID, question: ChatQuestion
     ) -> AsyncIterable:
-        history = chat_service.get_chat_history(self.chat_id)
+        # history = chat_service.get_chat_history(self.chat_id)
         callback = AsyncIteratorCallbackHandler()
         self.callbacks = [callback]
+        
+        print('brain generate_streamgenerate_stream generate_stream ')
 
         # The Chain that combines the question and answer
         qa = ConversationalRetrievalChain(
@@ -179,7 +185,8 @@ class KnowledgeBrainQA(BaseModel, QAInterface):
             return_source_documents=True,
         )
 
-        transformed_history = format_chat_history(history)
+        # transformed_history = format_chat_history(history)
+        transformed_history = []
 
         response_tokens = []
 

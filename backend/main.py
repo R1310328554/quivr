@@ -83,11 +83,13 @@ if __name__ == "__main__":
     # run main.py to debug backend
     import uvicorn
 
+    logger.error('generate_streamgenerate_streamgenerate_stream env is : ' + os.getenv('OPENAI_API_KEY'))
     for x in  os.environ:
-        print('env is : ',x)
+        print('env is : ',x, os.getenv(x))
+        logger.warning('env is : ' + x + ' = ' +  os.getenv(x))
         
     # 6549e8f36db40f2252af41956af98ed9
-    print('env OPENAI_PROXY : ', os.environ["OPENAI_PROXY"] )
+    # print('env OPENAI_PROXY : ', os.environ["OPENAI_PROXY"] )
     
     evs =  os.getenv('OPENAI_PROXY')
     print('OPENAI_PROXY :', evs)

@@ -192,7 +192,8 @@ async def create_question2_handler(
     | None = Query(..., description="The ID of the brain")
 ) -> GetChatHistoryOutput:
     email = 'hnczlk@sina.com'
-    user_id = UUID('848805ca-1633-417b-a575-0f8b9584986b')
+    # user_id = UUID('848805ca-1633-417b-a575-0f8b9584986b')
+    user_id = UUID('b6b3b7d3-ab30-4cc7-bdfa-6e370f80cd87')
     current_user: UserIdentity = UserIdentity(email=email, id=user_id)
     logger.warn('from http qst: ' + chat_question.question)
     print(1234456)
